@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1741259331 source:e:\github\bmtp-lab-7-tereshchenko\bmtp-lab-7-tereshchenko\main.c
+	<stdio.h>
+	<string.h>
+
