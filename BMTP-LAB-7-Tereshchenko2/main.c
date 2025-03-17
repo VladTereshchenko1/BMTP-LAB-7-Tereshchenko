@@ -4,34 +4,32 @@ void processNumbers() {
     double numbers[15];
     int count = 0;
 
-    // Введення 15 чисел
-    printf("Введіть 15 чисел:\n");
+    printf("Vvedit' 15 chisel:\n");
     for (int i = 0; i < 15; i++) {
         while (1) {
-            printf("Число %d: ", i + 1);
+            printf("Chislo %d: ", i + 1);
             if (scanf("%lf", &numbers[i]) == 1) {
                 break;
             } else {
-                printf("Введено некоректне значення. Будь ласка, введіть число.\n");
-                while(getchar() != '\n'); // Очищення буфера введення
+                printf("Vvedeno nekorektne znachennya. Bud' laska, vvedit' chislo.\n");
+                while(getchar() != '\n'); 
             }
         }
     }
 
-    // Підрахунок чисел у заданому діапазоні
+    
     for (int i = 0; i < 15; i++) {
         if (numbers[i] > 3.50 && numbers[i] < 150.02) {
             count++;
         }
     }
 
-    // Виведення чисел у зворотному порядку
-    printf("\nЧисла у зворотному порядку:\n");
+    printf("\nChisla u zvorotnomu poryadku:\n");
     for (int i = 14; i >= 0; i--) {
         printf("%.2lf ", numbers[i]);
     }
 
-    printf("\n\nКількість чисел, більших за 3.50 і менших за 150.02: %d\n", count);
+    printf("\n\nKilkist' chisel, bil'shykh za 3.50 i menshykh za 150.02: %d\n", count);
 }
 
 int main() {
@@ -40,13 +38,12 @@ int main() {
     do {
         processNumbers();
 
-        // Запит на повторне виконання
-        printf("\nПовторити виконання програми? (Y/N): ");
+        printf("\nPovtoryty vykonannya programy? (Y/N): ");
         scanf(" %c", &repeat);
-        while (getchar() != '\n'); // Очищення буфера
+        while (getchar() != '\n'); 
 
     } while (repeat == 'Y' || repeat == 'y');
 
-    printf("Програма завершена.\n");
+    printf("Programa zavershena.\n");
     return 0;
 }

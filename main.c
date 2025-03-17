@@ -5,7 +5,7 @@
 
 int main() {
     char sentence[MAX_LEN];
-    printf("Введіть речення: ");
+    printf("Vvedit' rechenya: ");
     fgets(sentence, MAX_LEN, stdin);
 
     size_t len = strlen(sentence);
@@ -15,16 +15,17 @@ int main() {
     }
 
     if ((len >= 1 && sentence[len - 1] == '.') || (len >= 3 && strcmp(&sentence[len - 3], "...") == 0)) {
-        printf("Речення має коректне завершення.\n");
+        printf("Rechenya maye korektne zavershennya.\n");
 
-        if (strstr(sentence, "масив") != NULL) {
-            printf("У реченні є слово 'масив'.\n");
+        if (strstr(sentence, "masyv") != NULL) {
+            printf("U rechenni ye slovo 'masyv'.\n");
         } else {
-            printf("У реченні немає слова 'масив'.\n");
+            printf("U rechenni nemaye slova 'masyv'.\n");
         }
     } else {
-        printf("Речення має некоректне завершення.\n");
+        printf("Rechenya maye nekorektne zavershennya.\n");
     }
 
     return 0;
 }
+
